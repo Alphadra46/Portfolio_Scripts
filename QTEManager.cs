@@ -42,7 +42,7 @@ public class QTEManager : MonoBehaviour
     private bool isQTEActive = false;
     private QTEKeyIcon rightInputToPress;
 
-    private float qteStartTime; //TODO - Peut-être pour du débug uniquement
+    private float qteStartTime;
     private GameObject qteInputPrompt;
     private Image qteInputSprite;
 
@@ -66,7 +66,6 @@ public class QTEManager : MonoBehaviour
 
     private void StartQTE(QTEConfig config)
     {
-        //TODO - Faire en sorte de lancer les différentes parties de la séquence s'il y en a plusieurs
         playerAnimator.SetTrigger("StartQTE"+currentAttackInfos.attackName);
         
         currentQTE = config;
