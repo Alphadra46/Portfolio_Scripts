@@ -19,11 +19,6 @@ public class ChatManager : MonoBehaviour
     [ContextMenu("SendMessage")]
     public void TestSendChatMessage()
     {
-        // requestBody = new ChatMessageRequestBody() {
-        //     broadcaster_id = Twitch.API.GetMyStreamInfo().MaybeResult.Id,
-        //     sender_id = Twitch.API.GetMyUserInfo().MaybeResult.ChannelId,
-        // };
-
         requestBody.broadcaster_id = Twitch.API.GetMyUserInfo().MaybeResult.ChannelId;
         requestBody.sender_id = Twitch.API.GetMyUserInfo().MaybeResult.ChannelId;
         
